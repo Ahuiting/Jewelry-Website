@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the provided CSS styles -->
+    <title>My Cart </title>
+
+    <link rel="icon" href= "shopping-cart.png" type="image/png">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <img src="stylin' wiring/finalnw2.png" alt="Company Logo" class="logo">
+        <nav >
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><img src="shopping-cart.png" class="ring"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Shopping Cart</h1>
+    <ul id="cartItems">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+
+    <script src="script.js"></script>
+
+
+    <!-- Cart Items Section -->
+    <section id="cart">
+        <div id="items">
+            <!-- Cart items -->
+            <div id="cart-item1" class="cart-item">
+                <img src="path/to/item1.png" alt="Cart Item 1" class="cart-item-image">
+                <div id="des">
+                    <h5>Item 1</h5>
+                    <p1>Description of item 1</p1>
+                    <p2>$20.00</p2>
+                </div>
+            </div>
+
+            <div id="cart-item2" class="cart-item">
+                <img src="path/to/item2.png" alt="Cart Item 2" class="cart-item-image">
+                <div id="des">
+                    <h5>Item 2</h5>
+                    <p1>Description of item 2</p1>
+                    <p2>$25.00</p2>
+                </div>
+            </div>
+            <!-- Add more cart items as needed -->
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div id="cart-summary">
+            <h3>Cart Summary</h3>
+            <p1>Subtotal: $45.00</p1>
+            <p1>Tax: $3.00</p1>
+            <p1>Total: $48.00</p1>
+            <button type="button" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+</body>
+
+</html>
