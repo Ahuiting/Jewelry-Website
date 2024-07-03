@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 html {
     scroll-snap-type: y proximity;
     background-color: #F0F0F0;
@@ -30,7 +30,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #D99077; /* Rose Gold #E69B86*/
+    background-color: #D99077;
     height: 60px;
     color: white; /* White */
     /* width: 100vw; */
@@ -44,12 +44,13 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 #nav h1 {
-  font-family: 'Great Vibes', cursive; /* Elegant serif font */
+  font-family: 'Parisienne', cursive; /* Elegant serif font */
   font-size: 34px; /* Adjust size as needed */
-  font-weight: 400; /* Bold */
-  color: #fff; /* White */
+  font-weight: 500; /* Bold */
+  color: #333; /* charcoal */
   /* font-style: italic; */
   margin: 0; /* Remove default margin */
+  letter-spacing: -0.01em; /* Adjust spacing as needed */
 }
 
 #navbar {
@@ -68,18 +69,18 @@ body {
 }
 
 #navbar li a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'alegreya', serif;
     font-size: 23px;
     /* color: #333; */
-    color: white;
+    color: #333;
     text-decoration: none;
     transition: 0.3s ease;
 }
 
 #navbar li a:hover{
-    transition: filter 0.3s ease;
+    transition: color 0.3s ease;
     /*  #9966CC rgb(162, 162, 162) */
-    filter: brightness(0.8);
+    color: #000;
 }
 
 #landing {
@@ -183,8 +184,9 @@ h2 {
 }
 p {
     color: rgb(118, 118, 118);
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'alegreya', sans-serif;
     
     
 }
@@ -260,7 +262,8 @@ p {
 
 #items #bracelets:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-3px)
+    transform: translateY(-3px);
+    transition: transform 0.3s;
 }
 
 #items #rings {
@@ -273,7 +276,8 @@ p {
 
 #items #rings:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-3px)
+    transform: translateY(-3px);
+    transition: transform 0.3s;
 }
 
 #items #necklaces {
@@ -286,7 +290,8 @@ p {
 
 #items #necklaces:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-3px)
+    transform: translateY(-3px);
+    transition: transform 0.3s;
 }
 
 #items #earrings {
@@ -299,7 +304,8 @@ p {
 
 #items #earrings:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-3px)
+    transform: translateY(-3px);
+    transition: transform 0.3s;
 }
 
 #descript {
@@ -314,7 +320,7 @@ p {
     height: 333px;
     margin: 40px 0px;
     background-color: #D99077;
-    color: white;
+    color: #333;
     border-radius: 33px;
 }
 
@@ -323,7 +329,7 @@ p {
     text-align: center;
 }
 #descript1 p {
-    color: white;
+    color: #333;
 }
 
 
@@ -692,7 +698,6 @@ h7 {
 
   .Description {
     align-self: stretch;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     /* font-family: Source Sans Pro; */
     font-weight: 300;
@@ -765,7 +770,7 @@ h7 {
     padding-top: 16px;
     padding-bottom: 16px;
     background: #D99077;
-    border-radius: 8px;
+    border-radius: 33px;
     justify-content: center;
     align-items: center;
     gap: 4px;
@@ -779,8 +784,8 @@ h7 {
   .Cta {
     text-align: center;
     color: white;
-    font-size: 14px;
-    font-family: Loto, sans-serif;
+    font-size: 24px;
+    font-family: 'alegreya', serif;
     font-weight: 400;
     line-height: 22.40px;
     word-wrap: break-word;
