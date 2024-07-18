@@ -7,67 +7,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> <!-- Link to the provided CSS styles -->
-    <title>My Cart </title>
+    <title>My Cart</title>
 
-    <link rel="icon" href= "shopping-cart.png" type="image/png">
+    <link rel="icon" href= "stylin' wiring/shoppingbagIcon.png" type="image/png">
+    <script src="cart.js" defer></script>
 </head>
 
-<body>
-    <!-- Header Section -->
     <header id="header">
-        <img src="stylin' wiring/finalnw2.png" alt="Company Logo" class="logo">
+        <img class="logo" src="stylin' wiring/logo.svg" alt="Company Logo" class="logo">
         <nav >
+            
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><img src="shopping-cart.png" class="ring"></a></li>
+                <li><a href="cart.html"><img src="stylin' wiring/shoppingbag333.svg" class="ring"></a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>Shopping Cart</h1>
-    <ul id="cartItems">
-        <!-- Cart items will be dynamically added here -->
-    </ul>
-
-    <script src="script.js"></script>
-
-
-    <!-- Cart Items Section -->
-    <section id="cart">
-        <div id="items">
-            <!-- Cart items -->
-            <div id="cart-item1" class="cart-item">
-                <img src="path/to/item1.png" alt="Cart Item 1" class="cart-item-image">
-                <div id="des">
-                    <h5>Item 1</h5>
-                    <p1>Description of item 1</p1>
-                    <p2>$20.00</p2>
+    <body>
+        <div class="cart-container">
+            
+            <div class="cart-content">
+                <div class="cart-items">
+                    <h1>Your Bag</h1>
+                    <div class="cart-item">
+                        <img src="stylin' wiring/redeye3.jpg" alt="Ring" class="cartitemimg">
+                        <div class="item-details">
+                            <h1 onclick="window.location.href='eyerings.html'">Eye Ring</h1>
+                            <p class="p4">$100.00</p>
+                            <p class="p4">Color: Red</p>
+                            <div class="quantity-control">
+                                <button class="decrease">-</button>
+                                <input type="number" value="1">
+                                <button class="increase">+</button>
+                            </div>
+                            <button class="remove-item">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h1>Order Summary</h1>
+                    <p class="p4">Subtotal: $100.00</p>
+                    <p class="p4">Shipping: $5.00</p>
+                    <p class="p4">Total: $105.00</p>
+                    <button class="checkout">Checkout</button>
                 </div>
             </div>
+        </div>
+        <div id="recommendations">
+            <h1>You may also like</h1>
+            <div class="recommended-items">
+                <div class="product-item" data-category="A">
+                    <img src="stylin' wiring/IMG_5406.jpg" alt="Ring 3" class="product-image">
+                    <div id="des">
+                        <h5>Flower Ring</h5>
+                        <p1>$65.00</p1>
+                        <button id="addToCartBtn">
+                            <h7>Add to Cart</h7>
+                        </button>
+                        <script src="script.js"></script>
+                    </div>
+                </div>
+                <div class="product-item" data-category="A">
+                    <img src="stylin' wiring/IMG_5506.jpg" alt="Ring 3" class="product-image">
+                    <div id="des">
+                        <h5>Copper Rock Ring</h5>
+                        <p1>$80.00</p1>
+                        <button id="addToCartBtn">
+                            <h7>Add to Cart</h7>
+                        </button>
+                        <script src="script.js"></script>
+                    </div>
+                </div>
+                <div class="product-item" data-category="A">
+                    <img src="stylin' wiring/IMG_5541.jpg" alt="Ring 3" class="product-image">
+                    <div id="des">
+                        <h5>Sky Blue Gem Ring</h5>
+                        <p1>$75.00</p1>
+                        <button id="addToCartBtn">
+                            <h7>Add to Cart</h7>
+                        </button>
+                        <script src="script.js"></script>
+                    </div>
+                </div>
+                <div class="product-item" data-category="C">
+                    <img src="stylin' wiring/IMG_5489.jpg" alt="Ring 3" class="product-image">
+                    <div id="des">
+                        <h5>Curly Stone Ring</h5>
+                        <p1>$55.00</p1>
+                        <button id="addToCartBtn">
+                            <h7>Add to Cart</h7>
+                        </button>
+                        <script src="script.js"></script>
+                    </div>
+                </div>
+                <div class="product-item" data-category="B">
+                    <img src="stylin' wiring/IMG_9253.jpg" alt="World Bracelet" class="product-image">
+                    <div id="des">
+                        <h5>World Bracelet</h5>
+                        <p1>$50.00</p1>
+                        <button id="addToCartBtn">
+                            <h7>Add to Cart</h7>
+                        </button>
+                        <script src="script.js"></script>
+                    </div>
+                </div>
+                <div class="product-item" data-category="B" data-id="2">
+                    <img src="stylin' wiring/earland2.jpg" alt="Earring 1" class="product-image">
+                    <div id="des">
+                        <h5>Star Burst Earring</h5>
+                        <p1>$100.00</p1>
+                        <button id="addToCartBtn">
+                            <h7>Add to Cart</h7>
+                        </button>
+                        <script src="script.js"></script>
+                    </div>
+                </div>
+        </div>
 
-            <div id="cart-item2" class="cart-item">
-                <img src="path/to/item2.png" alt="Cart Item 2" class="cart-item-image">
-                <div id="des">
-                    <h5>Item 2</h5>
-                    <p1>Description of item 2</p1>
-                    <p2>$25.00</p2>
+        <footer>
+            <div class="footer-container">
+                
+                <div class="footer-section">
+                    <h6>Quick Links</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                        <h6>Contact Us</h6>
+                        <p>Email: stylinwiring@gmail.com</p>
                 </div>
             </div>
-            <!-- Add more cart items as needed -->
-        </div>
-
-        <!-- Cart Summary Section -->
-        <div id="cart-summary">
-            <h3>Cart Summary</h3>
-            <p1>Subtotal: $45.00</p1>
-            <p1>Tax: $3.00</p1>
-            <p1>Total: $48.00</p1>
-            <button type="button" id="checkout-btn">Proceed to Checkout</button>
-        </div>
-    </section>
-</body>
-
+            <div class="footer-bottom">
+                <p>2024 Stylin' Wiring.</p>
+            </div>
+        </footer>
+    </body>
 </html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 150">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 93.03px;
+        letter-spacing: 0em;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #000;
+        font-family: BickhamScriptPro-Regular, 'Bickham Script Pro';
+      }
+
+      .cls-2 {
+        font-size: 82.69px;
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(10.85 56.29)"><tspan x="0" y="0">Stylin’</tspan></text>
+  <text class="cls-2" transform="translate(86.53 103.47)"><tspan x="0" y="0">Wiring</tspan></text>
+</svg>
