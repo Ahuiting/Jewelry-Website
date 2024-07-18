@@ -50,15 +50,20 @@
                 </div>
                 <div class="cart-summary">
                     <h1>Order Summary</h1>
-                    <p class="p4">Subtotal: $100.00</p>
-                    <p class="p4">Shipping: $5.00</p>
-                    <p class="p4">Total: $105.00</p>
-                    <button class="checkout">Checkout</button>
+                    <div id="summary">
+                        <p id="ptop" class="p4">Subtotal: $100.00</p>
+                        <p class="p4">Shipping: $5.00</p>
+                        <div id="total">
+                            <p class="p4">Total:</p>
+                            <p id="cartTotal">$105.00</p>
+                        </div>
+                        <button class="checkout">Checkout</button>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="recommendations">
-            <h1>You may also like</h1>
+            <h1 id="recommends">You may also like</h1>
             <div class="recommended-items">
                 <div class="product-item" data-category="A">
                     <img src="stylin' wiring/IMG_5406.jpg" alt="Ring 3" class="product-image">
