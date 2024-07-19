@@ -754,12 +754,12 @@ footer {
     padding: 3px;
     margin: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }
 
 #addToCartBtn:hover {
-    background-color: #D99077;
-    border-color: #D99077;
+    background-color: #333;
+    border-color: #333;
     color: white;
     
 }
@@ -874,6 +874,7 @@ footer {
     align-items: flex-start;
     gap: 16px;
     display: flex;
+    
   }
   
   .Button {
@@ -882,16 +883,19 @@ footer {
     padding-right: 24px;
     padding-top: 16px;
     padding-bottom: 16px;
-    background: #D99077;
+    /* background: #D99077; */
+    background-color:#4f4f4f;
     border-radius: 33px;
     justify-content: center;
     align-items: center;
     gap: 4px;
     display: flex;
+    transition: background-color 0.5s ease;
   }
 
   .Button:hover {
-    background: #ae735f;
+    /* background: #ae735f; */
+    background-color: #333;
   }
   
   .Cta {
@@ -944,9 +948,17 @@ footer {
     width: 100%;
     border-radius: 33px;
     cursor: pointer;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: #4f4f4f;
+    color: white;
+    border: 1px solid #4f4f4f;
+    transition: background-color 0.3s ease;
+    font-size: .7em;
+    font-family: libre baskerville, serif;
 
+}
+
+.cart-summary button:hover {
+    background-color: #333;
 }
 #ptop {
     padding-top: 20px;
@@ -961,16 +973,21 @@ footer {
 }
 #total .p4 {
     align-content: left;
+    color: #4f4f4f;
 }
 #cartTotal {
     justify-self: flex-end;
     margin: 0 auto;
+    font-weight: 400;
+    color: #4f4f4f;
 }
+
+
 
 .quantity-control {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 #quantity-control {
     padding: 10px;
@@ -982,15 +999,16 @@ footer {
 
 .quantity-control input {
     width: 35px;
-    height: 25px;
-    line-height: 25px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 50%;
     margin: 0 auto;
     text-align: center;
     padding: 0;
-    font-style: 'libre baskerville', serif;
+    font-family: 'libre baskerville', serif;
+    font-size: .6em;
     font-weight: 400;
 }
 /* get rid of input scroll arrows */
@@ -1014,6 +1032,7 @@ footer {
     height: auto; */
     border-radius: 50%;
     cursor: pointer;
+    margin-top: 5px;
     border: 1px solid #ccc;
 }
 
@@ -1023,13 +1042,20 @@ footer {
     font-weight: 400;
     text-align: center;
     display: flex;
+    color: #333;
     justify-content: center;
     align-items: center;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin: 0px 10px;
+    transition: background-color 0.3s ease;
 }
+.increase:hover, .decrease:hover {
+    background-color: #4f4f4f;
+    color: white;
+}
+
 
 .cart-item {
     display: flex;
@@ -1039,6 +1065,7 @@ footer {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
+    position: relative;
 }
 
 .cartitemimg {
@@ -1051,6 +1078,24 @@ footer {
     width: 70%;
     padding: 30px;
 }
+
+.item-details .quantity-control {
+    max-width: 100px;
+}
+    
+.remove-item {
+    color: rgba(128, 128, 128, 0.608);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    font-family: noto 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, serif;
+    font-size: 1em;
+    font-weight: 100;
+}
+
 #ptop {
     border-top: 1px solid #ccc;
 }
@@ -1152,8 +1197,13 @@ footer {
     border: none;
     border-radius: 33px;
     cursor: pointer;
-    background-color: #D99077;
+    /* background-color: #D99077; */
+    background-color:#4f4f4f;
     color: white;
+    transition: background-color 0.3s ease;
+  }
+  #sort-by:hover, #filter-by:hover {
+    background-color: #333;
   }
 
   .dropdown {
@@ -1209,12 +1259,13 @@ footer {
     padding: 3px;
     margin: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #shop #addToCartBtn:hover {
-    background-color: #D99077;
-    border-color: #D99077;
+    /* background-color: #D99077;
+    border-color: #D99077; */
+    background-color:#4f4f4f;
     color: white;
     
 }
@@ -1324,7 +1375,7 @@ footer {
 
 .product-details .price {
     font-size: 24px;
-    color: #D99077;
+    color: #e3b456;
     margin-bottom: 20px;
 }
 
@@ -1334,18 +1385,19 @@ footer {
 }
 
 .product-details .add-to-cart {
-    background: #D99077;
-    color: black;
+    background: #4f4f4f;
+    color: white;
     padding: 15px 20px;
     border: none;
-    border-radius: 50%;
+    border-radius: 33px;
     font-size: 18px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .product-details .add-to-cart:hover {
-    background: #d35400;
+    background-color: #333;
+    /* #d35400 */
 }
 
 #productbody {
