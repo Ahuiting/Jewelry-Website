@@ -69,14 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial shuffle and display
   displayItems(shuffle(items));
 
-  // // Event listeners
+  // Event listeners
   // sortBtn.addEventListener('click', sortItems);
   // filterBtn.addEventListener('click', filterItems);
-  // searchBar.addEventListener('input', () => {
-  //   const searchText = searchBar.value.toLowerCase();
-  //   const filteredItems = items.filter(item => item.textContent.toLowerCase().includes(searchText));
-  //   displayItems(filteredItems);
-  // });
+  searchBar.addEventListener('input', () => {
+    const searchText = searchBar.value.toLowerCase();
+    const filteredItems = items.filter(item => item.textContent.toLowerCase().includes(searchText));
+    displayItems(filteredItems);
+  });
 });
 
 // // Handling sort and filter

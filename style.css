@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
-html {
-    scroll-snap-type: y proximity;
+html {   
     background-color: #F0F0F0;
     width: 100vw;
     margin: 0;
@@ -11,10 +10,11 @@ html {
 }
 /* desktop for now */
 body {
-    width: 100vw;
+    /* width: 100vw; */
     margin: 0;
     padding: 0;
     font-size: 24px;
+    scroll-snap-type: y proximity;
     scroll-snap-align: start;
 }
 
@@ -47,7 +47,6 @@ body {
     right: 0;
     top: 0; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure it appears above other content */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 #nav h1 {
   font-family: 'Parisienne', cursive; /* Elegant serif font */
@@ -76,7 +75,7 @@ body {
 
 #navbar li a {
     font-family: 'alegreya', serif;
-    font-size: 23px;
+    font-size: .99em;
     /* color: #333; */
     color: #333;
     text-decoration: none;
@@ -118,17 +117,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
    
-/* .heroimage { */
-    
-    /* float: right; */
-    /* margin-right: 0px; */
-    /* width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 33px;
-    border: 2px solid #F0F0F0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); */
-/* } */
 
 .heroimage:hover{
     box-shadow: 20px 20px 30px rgba(217, 153, 3, 0.06);
@@ -163,6 +151,7 @@ body {
     /* margin-bottom: -15px; */
     scroll-snap-align: start;
     /* margin-top: 40px; */
+
 }
 
 
@@ -172,7 +161,7 @@ body {
     color: #333;
     padding: 30px 70px;
     padding-right: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
  
 }
 
@@ -195,7 +184,7 @@ h2 {
 }
 p {
     color: rgb(118, 118, 118);
-    font-size: 36px;
+    font-size: 1.5em;
     font-weight: 400;
     font-family: 'alegreya', sans-serif;
     
@@ -209,59 +198,34 @@ p {
     width: 680px;
     flex: 1;
     order: 1;
-
+    margin: 0 auto;
 }
 
-
-#rings2 {
-    width: 160px;
+.displayitempics {
+    width: 100%;
+    max-width: 160px;
     height: auto;
     border-radius: 33px;
+    flex: 1 1 0;
 }
 
-#rings {
+.displayitems {
     padding: 10px;
     margin: 10px;
 }
 
-#bracelets1 {
-    width: 160px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#bracelets {
-    padding: 10px;
-    margin: 10px;
-}
-
-#necklaces1 {
-    width: 160px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#necklaces {
-    padding: 10px;
-    margin: 10px;
-}
-
-#earrings1 {
-    width: 160px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#earrings {
-    padding: 10px;
-    margin: 10px;
-}
 
 #des {
     color:#333;
     font-size: 20px;
     display: flex;
     flex-direction: column;
+    font-family: libre baskerville, serif;
+}
+#des h5 {
+    font-family: libre baskerville, serif;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 #items #bracelets {
@@ -269,13 +233,13 @@ p {
     border-radius: 33px;
     cursor: pointer;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: ease;
+    transition: transform 0.3s ease;
 }
 
 #items #bracelets:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
     transform: translateY(-3px);
-    transition: transform 0.3s;
+    
 }
 
 #items #rings {
@@ -283,13 +247,13 @@ p {
     border-radius: 33px;
     cursor: pointer;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: ease;
+    transition: transform 0.3s ease;
 }
 
 #items #rings:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
     transform: translateY(-3px);
-    transition: transform 0.3s;
+
 }
 
 #items #necklaces {
@@ -297,13 +261,12 @@ p {
     border-radius: 33px;
     cursor: pointer;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: ease;
+    transition: transform 0.3s ease;
 }
 
 #items #necklaces:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
     transform: translateY(-3px);
-    transition: transform 0.3s;
 }
 
 #items #earrings {
@@ -311,13 +274,13 @@ p {
     border-radius: 33px;
     cursor: pointer;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: ease;
+    transition: transform 0.3s ease;
 }
 
 #items #earrings:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
     transform: translateY(-3px);
-    transition: transform 0.3s;
+   
 }
 
 #descript {
@@ -349,7 +312,8 @@ p {
     overflow: auto; /* Handle overflow */
 }
 #descript1 p {
-    color: #333;
+    color: #4f4f4f;
+    /* prev 333 */
     font-size: 1em;
 }
 #descript1 h3 {
@@ -420,6 +384,7 @@ p {
     align-items: center;
     display: flex;
 }
+
 #threeflowers {
     width: 100%;
     height: auto;
@@ -427,6 +392,48 @@ p {
     border: 10px solid rgb(113, 113, 113);
     
 }
+
+#handcontainer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    max-height: 66vh;
+    margin: 40px auto;
+    margin-top: 60px;
+    margin-left: 160px;
+}
+#handcontainer2 p {
+    order: 2;
+    text-align: center;
+    max-width: 40vw;
+    font-size: 1.25em;
+    padding: 60px;
+    margin: 40px;
+    margin-right: auto;
+    margin-left: -10px;
+    padding-left: 0px;
+    
+}
+
+#hand2{
+    order: 1;
+    background-color: gray;
+    border-radius: 50%;
+    max-width: 60vh;
+    height: auto;
+    width: 100%;
+    padding: 17px;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 
 #featuredprods {
     display: flex;
@@ -442,7 +449,7 @@ p {
 
 h5 {
 font-size: 20px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: libre baskerville, serif;
 text-align: center;
 margin-top: 5px;
 margin-bottom: 5px;
@@ -494,124 +501,24 @@ p2 {
     align-items: center;
     justify-content: center;
 }
-
-
-#featring1 {
+.featring {
     padding: 10px;
     margin: 10px;
-    
-}
-#fr1 {
-    width: 185px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#feats #featring1 {
     border: 1px solid rgb(209, 209, 209);
     border-radius: 33px;
     cursor: pointer;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
     transition: transform 0.3s ease;
 }
-
-#feats #featring1:hover {
+.featring:hover {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
     transform: translateY(-5px);
 }
-
-#featring2 {
-    padding: 10px;
-    margin: 10px;
-}
-#fr2 {
+.fr {
     width: 185px;
     height: auto;
     border-radius: 33px;
 }
-
-#feats #featring2 {
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 33px;
-    cursor: pointer;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease;
-}
-
-#feats #featring2:hover {
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-5px);
-}
-#featring3 {
-    padding: 10px;
-    margin: 10px;
-    
-}
-#fr3 {
-    width: 185px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#feats #featring3 {
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 33px;
-    cursor: pointer;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease;
-}
-
-#feats #featring3:hover {
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-5px);
-}
-#featring4 {
-    padding: 10px;
-    margin: 10px;
-    
-}
-#fr4 {
-    width: 185px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#feats #featring4 {
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 33px;
-    cursor: pointer;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease;
-}
-
-#feats #featring4:hover {
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-5px);
-}
-#featring5 {
-    padding: 10px;
-    margin: 10px;
-}
-#fr5 {
-    width: 185px;
-    height: auto;
-    border-radius: 33px;
-}
-
-#feats #featring5 {
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 33px;
-    cursor: pointer;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease;
-}
-
-#feats #featring5:hover {
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-5px);
-}
-
-
 
 
 /* Add styles for product image, name, and price */
@@ -761,6 +668,7 @@ footer {
     background-color: #333;
     border-color: #333;
     color: white;
+    cursor: pointer;
     
 }
 
@@ -896,6 +804,7 @@ footer {
   .Button:hover {
     /* background: #ae735f; */
     background-color: #333;
+    cursor: pointer;
   }
   
   .Cta {
@@ -1094,6 +1003,12 @@ footer {
     font-family: noto 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, serif;
     font-size: 1em;
     font-weight: 100;
+    transition: color 0.3s ease;
+}
+
+.remove-item:hover {
+    color: #4f4f4f;
+    cursor: pointer;
 }
 
 #ptop {
@@ -1189,6 +1104,8 @@ footer {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 33px;
+    text-align: center;
+    width: 33%;
   }
   
   #sort-by, #filter-by {
@@ -1201,6 +1118,7 @@ footer {
     background-color:#4f4f4f;
     color: white;
     transition: background-color 0.3s ease;
+    width: 12%;
   }
   #sort-by:hover, #filter-by:hover {
     background-color: #333;
@@ -1246,6 +1164,7 @@ footer {
   }
   .product-item:hover {
     transform: translateY(-5px);
+    cursor: pointer;
   }
   #shop h5 {
     font-family: 'libre baskerville', serif;
@@ -1267,6 +1186,7 @@ footer {
     border-color: #D99077; */
     background-color:#4f4f4f;
     color: white;
+    
     
 }
 #shop h3 {
@@ -1375,7 +1295,8 @@ footer {
 
 .product-details .price {
     font-size: 24px;
-    color: #e3b456;
+    /* color: #e3b456; */
+    color: #ebaa48;
     margin-bottom: 20px;
 }
 
@@ -1507,3 +1428,75 @@ footer {
     align-items: center;
     margin: 20px auto;
 }
+
+/* Style the scrollbar track */
+html::-webkit-scrollbar {
+    width: 10px; /* Width of the entire scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent; /* Color of the tracking area */
+}
+
+/* Style the scrollbar thumb */
+html::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.436); 
+    border-radius: 10px; /* Rounded corners */
+    height: 20px;
+
+}
+
+/* Change scrollbar track on hover */
+html::-webkit-scrollbar-thumb:hover { 
+    background-color: rgba(128, 128, 128, 0.705); 
+}
+
+/* now for responsiveness */
+/* Tablet styles (apply to screen sizes >= 768px and < 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #landing {
+        flex-direction: column;
+      }
+  }
+  
+  /* Mobile styles (apply to screen sizes < 768px) */
+  @media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    .logo {
+        height: auto;
+        max-height: 70px;
+    }
+    #landing {
+      flex-direction: column;
+    }
+    .displayitempics {
+        max-width: 80px;
+    }
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    #text {
+        padding: 30px 0;
+    }
+    #items {
+        width: 100%; /* Make the #items div take full width on smaller screens */
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+    #landingimg {
+        width: 440px;
+        margin: 0 auto;
+        flex: 1 1 0;
+    }
+    #featuredprods::before {
+        content: "";
+        display: block;
+        height: 200px; /* Adjust this value to match the overlapping image's height */
+    }
+    .fr {
+        width: 90px;
+    }
+  }
