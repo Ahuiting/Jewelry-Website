@@ -464,7 +464,7 @@ h6 {
 }
 
 h3 {
-    font-size: 72px;
+    font-size: 3em;
     letter-spacing: -0.01em;
     line-height: 108%;
     text-align: center;
@@ -1498,5 +1498,24 @@ html::-webkit-scrollbar-thumb:hover {
     }
     .fr {
         width: 90px;
+    }
+
+  }
+  /* large desktops */
+  @media screen and (min-width: 1600px) {
+    body {
+        font-size: 32px;
+    }
+    #landingimg {
+        width: 740px;
+        margin: 0 auto;
+        flex: 1 1 0;
+    }
+    .displayitempics {
+        max-width: 370px;
+    }
+    .logo {
+        height: auto;
+        max-height: 150px;
     }
   }
