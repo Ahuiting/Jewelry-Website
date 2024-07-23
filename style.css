@@ -106,6 +106,7 @@ body {
     flex: 1;
     order: 2;
     flex-basis: 0;
+    padding-right: 40px;
 }
 #roses {
     width: 540px;
@@ -1055,7 +1056,7 @@ footer {
     justify-self: center;
     margin: 10px auto;
     flex: 1 1 0;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
     height: 60px;
@@ -1071,7 +1072,7 @@ footer {
 
 #shopnav li a {
     font-family: 'alegreya', serif;
-    font-size: 23px;
+    font-size: .99em;
     /* color: #333; */
     color: #333;
     text-decoration: none;
@@ -1101,7 +1102,7 @@ footer {
   
   #search-bar {
     padding: 10px;
-    font-size: 16px;
+    font-size: .66em;
     border: 1px solid #ccc;
     border-radius: 33px;
     text-align: center;
@@ -1110,7 +1111,7 @@ footer {
   
   #sort-by, #filter-by {
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: .66em;
     border: none;
     border-radius: 33px;
     cursor: pointer;
@@ -1219,17 +1220,8 @@ footer {
     width: 80%;
     margin-bottom: 40px;
 }
-/* @media (max-width: 600px) {
-    body {
-      font-size: 14px;
-    }
-  
-    h1 {
-      font-size: 1.5em;
-    }
-  } */
 
-  .product-carousel {
+.product-carousel {
     display: flex;
     justify-content: center;
     justify-self: center;
@@ -1453,15 +1445,56 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* now for responsiveness */
 /* Tablet styles (apply to screen sizes >= 768px and < 1024px) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
+@media only screen and (max-width: 1199px) {
+    #items {
+        padding: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    #roses {
+        display: none;
+    }
+    #feats{
+            width: 70%;
+            padding: 10px;
+            margin: 0 auto;
+            overflow-x: scroll;
+    
+        }
+    #feats::-webkit-scrollbar {
+        width: 8px; /* Adjust the width of the scrollbar */
+      }
+      #feats::-webkit-scrollbar-track {
+        background: transparent; /* Change the track color */
+      }
+      #feats::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 128, 128, 0.436); /* Change the thumb color */
+        border-radius: 10px; /* Optional: Add border-radius to the thumb */
+      }
+      #feats::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(128, 128, 128, 0.705); 
+      }
+    .featring {
+        width: calc(100% / 2 - 40px);
+    }
+    
     #landing {
         flex-direction: column;
       }
+      .product-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }  
+    #sort-by, #filter-by {
+        width: fit-content;
+        max-width: 115px;
+    }
+    #shopnav {
+        margin: 0 auto;
   }
-  
+}
   /* Mobile styles (apply to screen sizes < 768px) */
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 500px) {
     body {
         font-size: 16px;
     }
@@ -1485,11 +1518,13 @@ html::-webkit-scrollbar-thumb:hover {
     #items {
         width: 100%; /* Make the #items div take full width on smaller screens */
         padding: 0 20px; /* Adjust padding for smaller screens */
+        padding-left: 0;
     }
     #landingimg {
         width: 440px;
         margin: 0 auto;
         flex: 1 1 0;
+       
     }
     #featuredprods::before {
         content: "";
@@ -1500,6 +1535,38 @@ html::-webkit-scrollbar-thumb:hover {
         width: 90px;
     }
 
+    .displayitems {
+        flex: 1 1 100%;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #feats {
+        width: 80%;
+        padding: 10px;
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+    #feats::-webkit-scrollbar {
+        width: 8px; /* Adjust the width of the scrollbar */
+      }
+      #feats::-webkit-scrollbar-track {
+        background: transparent; /* Change the track color */
+      }
+      #feats::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 128, 128, 0.436); /* Change the thumb color */
+        border-radius: 10px; /* Optional: Add border-radius to the thumb */
+      }
+      #feats::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(128, 128, 128, 0.705); 
+      }
   }
   /* large desktops */
   @media screen and (min-width: 1600px) {
