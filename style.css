@@ -645,7 +645,7 @@ footer {
     cursor: pointer;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
     transition: ease;
-    width: 100%;
+    width: 20%;
     height: auto;
 
 }

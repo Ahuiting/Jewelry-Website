@@ -1,17 +1,9 @@
-// const images = document.querySelectorAll('.product-images img');
-// let currentImage = 0;
 
-// document.querySelector('.next').addEventListener('click', () => {
-//     images[currentImage].classList.remove('active');
-//     currentImage = (currentImage + 1) % images.length;
-//     images[currentImage].classList.add('active');
-// });
+// Example function to handle "Add to Cart"
+function addToCart(productId) {
+    console.log("Added product to cart:", productId);
+}
 
-// document.querySelector('.prev').addEventListener('click', () => {
-//     images[currentImage].classList.remove('active');
-//     currentImage = (currentImage - 1 + images.length) % images.length;
-//     images[currentImage].classList.add('active');
-// });
 
 document.querySelector('.add-to-cart').addEventListener('click', (e) => {
     const productId = e.target.getAttribute('data-id');

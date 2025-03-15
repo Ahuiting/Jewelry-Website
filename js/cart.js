@@ -1,31 +1,26 @@
-// document.querySelectorAll('.increase').forEach(button => {
-//     button.addEventListener('click', () => {
-//         const input = button.previousElementSibling;
-//         input.value = parseInt(input.value) + 1;
-//         updateCart();
-//     });
-// });
 
-// document.querySelectorAll('.decrease').forEach(button => {
-//     button.addEventListener('click', () => {
-//         const input = button.nextElementSibling;
-//         if (input.value > 1) {
-//             input.value = parseInt(input.value) - 1;
-//             updateCart();
-//         }
-//     });
-// });
-
-// document.querySelectorAll('.remove-item').forEach(button => {
-//     button.addEventListener('click', () => {
-//         button.closest('.cart-item').remove();
-//         updateCart();
-//     });
-// });
-
-// function updateCart() {
-//     // Update cart total and other details
-// }
+function increase_click(button){
+    const input = button.previousElementSibling;
+    input.value = parseInt(input.value) + 1;
+    updateCartTotal();
+}
+function decrease_click(button){
+    const input = button.nextElementSibling;
+    let val=parseInt(input.value)
+    console.log(val,input)
+    if (val > 1) {
+        input.value = val - 1;
+        updateCartTotal();
+    } else {
+        console.log("removing",button)
+        button.closest('.cart-item').remove();
+        updateCartTotal();
+    }
+}
+function remove_click(button){
+        button.closest('.cart-item').remove();
+        updateCartTotal();
+}
 
 
 
@@ -35,6 +30,7 @@ const cartItemsContainer = document.querySelector('.cart-items');
 const cartSummary = document.querySelector('.cart-summary');
 const cartTotalElement = document.getElementById('cartTotal');
 const ptop = document.getElementById('ptop');
+
 
 // Function to update the cart total
 function updateCartTotal() {
@@ -67,11 +63,11 @@ function addToCart(item) {
             <h1>${title}</h1>
             <p class="p4">$ ${price.toFixed(2)}</p>
             <div class="quantity-control">
-                <button class="decrease">-</button>
+                <button class="decrease" onclick="decrease_click(this)">-</button>
                 <input type="number" value="1">
-                <button class="increase">+</button>
+                <button class="increase" onclick="increase_click(this)">+</button>
             </div>
-            <button class="remove-item">Remove</button>
+            <button class="remove-item" onclick="remove_click(this)">X</button>
         </div>
     `;
 
@@ -102,7 +98,7 @@ function addToCart(item) {
         cartItemsContainer.removeChild(cartItem);
         updateCartTotal();
     });
-    
+
     console.log('addToCart called with item:', item);
 
     // Update the cart total
