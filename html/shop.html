@@ -6,82 +6,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css"> <!-- Link to the provided CSS styles -->
-    <title>Shop </title>
-
-    <link rel="icon" href="../stylin'%20wiring/shoppingbagIcon.png" type="image/png">
-
+    <title>Shop - Stylin' Wiring</title>
+    <link rel="icon" href="../product_images/shoppingbagIcon.png" type="image/png">
 </head>
 
 <body id="shop">
-<!-- Header Section -->
-<header id="header">
-    <img class="logo" src="../stylin'%20wiring/logo.svg" alt="Company Logo" class="logo">
-    <nav>
-
-        <ul id="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html"><img src="../stylin'%20wiring/shoppingbag333.svg" class="ring"></a></li>
-        </ul>
-    </nav>
-</header>
-
-<h3 class="shop">Shop</h3>
-<nav>
-    <ul id="shopnav">
-        <li><a href="#" id="filter-rings">Rings</a></li>
-        <li><a href="#" id="filter-bracelets">Bracelets</a></li>
-        <li><a href="#" id="filter-necklaces">Necklaces</a></li>
-        <li><a href="#" id="filter-earrings">Earrings</a></li>
-    </ul>
-</nav>
-<!-- Search, Sort by, Filter -->
-<div class="controls">
-    <input type="text" id="search-bar" placeholder="Search products">
-    <select id="sort-by" class="dropdown">
-        <option value="">Sort by</option>
-        <option value="price-asc">Price: Low to High</option>
-        <option value="price-desc">Price: High to Low</option>
-    </select>
-    <select id="filter-by" class="dropdown">Filter
-        <option value="">Filter</option>
-        <option value="category-d">Color</option>
-        <option value="category-a">Size</option>
-        <option value="category-b">Sets</option>
-        <option value="category-c">Price</option>
-    </select>
-</div>
-
-<div id="product-container"></div>
-
-<!-- footer -->
-<footer>
-    <div class="footer-container">
-
-        <div class="footer-section">
-            <h6>Quick Links</h6>
-            <ul>
+    <!-- Header Section -->
+    <header id="header">
+        <img class="logo" src="../product_images/logo.svg" alt="Stylin' Wiring Logo">
+        <nav>
+            <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" aria-label="Shopping Cart">
+                    <img src="../product_images/shoppingbag333.svg" class="ring" alt="Cart Icon">
+                </a></li>
             </ul>
-        </div>
-        <div class="footer-section">
-            <h6>Contact Us</h6>
-            <p>Email: stylinwiring@gmail.com</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>2024 Stylin' Wiring.</p>
-    </div>
-</footer>
+        </nav>
+    </header>
 
-<script src="../js/script.js"></script>
-<script src="../js/cart.js"></script>
-<script src="../js/shop.js"></script>
+    <!-- Main Shop Content -->
+    <main class="shop-container">
+        <!-- Category Navigation -->
+        <nav class="category-nav">
+            <ul id="shopnav">
+                <li><a href="#" id="filter-all" class="active">All Products</a></li>
+                <li><a href="#" id="filter-rings">Rings</a></li>
+                <li><a href="#" id="filter-bracelets">Bracelets</a></li>
+                <li><a href="#" id="filter-necklaces">Necklaces</a></li>
+                <li><a href="#" id="filter-earrings">Earrings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Shop Layout -->
+        <div class="shop-layout">
+            <!-- Sidebar Filter -->
+            <aside class="filter-sidebar">
+                <div class="filter-header">
+                    <h3>Filters</h3>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Materials</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="silver">
+                            Silver
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="bronze">
+                            Bronze
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h4>Stones</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="stone" value="ruby">
+                            Ruby
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="stone" value="sapphire">
+                            Sapphire
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="stone" value="amethyst">
+                            Amethyst
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h4>Price Range</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="price" value="under-50">
+                            Under €50
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="price" value="50-100">
+                            €50 - €100
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="price" value="over-100">
+                            Over €100
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="shop-main-content">
+                <!-- Shop Controls -->
+                <section class="shop-controls">
+                    <div class="controls">
+                        <button class="filter-toggle" aria-label="Open filters">
+                            <span>Filters</span>
+                        </button>
+                        <input type="text" id="search-bar" placeholder="Search products" aria-label="Search products">
+                        <select id="sort-by" class="dropdown" aria-label="Sort products">
+                            <option value="">Sort by</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Product Grid -->
+                <section class="product-section">
+                    <div id="product-container" class="product-container"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h6>Contact Us</h6>
+                <p>Email: stylinwiring@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 Mirromiro.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/shop.js"></script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>

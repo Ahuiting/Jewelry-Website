@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css"> <!-- Link to the provided CSS styles -->
-    <title>My Cart</title>
+    <title>Cart</title>
 
-    <link rel="icon" href= "../stylin'%20wiring/shoppingbagIcon.png" type="image/png">
-    <script src="../js/cart.js" defer></script>
+    <link rel="icon" href= "../product_images/shoppingbagIcon.png" type="image/png">
+    <script src="../js/script.js" defer></script>
 </head>
 
     <header id="header">
-        <img class="logo" src="../stylin'%20wiring/logo.svg" alt="Company Logo" class="logo">
+        <img class="logo" src="../product_images/logo.svg" alt="Company Logo" class="logo">
         <nav >
             
             <ul id="navbar">
@@ -22,7 +22,7 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><img src="../stylin'%20wiring/shoppingbag333.svg" class="ring"></a></li>
+                <li><a href="cart.html"><img src="../product_images/shoppingbag333.svg" class="ring"></a></li>
             </ul>
         </nav>
     </header>
@@ -31,31 +31,33 @@
         <div class="cart-container">
             
             <div class="cart-content">
-                <div class="cart-items">
+                <!-- Empty Cart State -->
+                <div class="cart-items empty-state">
                     <h1>Your Bag</h1>
-                    <div class="cart-item">
-                        <img src="../stylin'%20wiring/redeye3.jpg" alt="Ring" class="cartitemimg">
-                        <div class="item-details">
-                            <h1 onclick="window.location.href='eyerings.html'">Eye Ring</h1>
-                            <p class="p4">$100.00</p>
-                            <p class="p4">Color: Red</p>
-                            <div class="quantity-control">
-                                <button class="decrease">-</button>
-                                <input type="number" value="1">
-                                <button class="increase">+</button>
-                            </div>
-                            <button class="remove-item">X</button>
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">
+                            <img src="../product_images/shoppingbag333.svg" alt="Empty Cart">
                         </div>
+                        <p>Your cart is empty</p>
+                        <a href="shop.html" class="continue-shopping">Continue Shopping</a>
                     </div>
                 </div>
-                <div class="cart-summary">
+
+                <!-- Filled Cart State -->
+                <div class="cart-items filled-state" style="display: none;">
+                    <h1>Your Bag</h1>
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+
+                <!-- Order Summary (only shown when cart has items) -->
+                <div class="cart-summary" style="display: none;">
                     <h1>Order Summary</h1>
                     <div id="summary">
-                        <p id="ptop" class="p4">Subtotal: $100.00</p>
-                        <p class="p4">Shipping: $5.00</p>
+                        <p id="ptop" class="p4">Subtotal: €0.00</p>
+                        <p class="p4">Shipping: €5.00</p>
                         <div id="total">
                             <p class="p4">Total:</p>
-                            <p id="cartTotal">$105.00</p>
+                            <p id="cartTotal">€0.00</p>
                         </div>
                         <button class="checkout">Checkout</button>
                     </div>
@@ -66,7 +68,7 @@
             <h1 id="recommends">You may also like</h1>
             <div class="recommended-items">
                 <div class="product-item" data-category="A">
-                    <img src="../stylin'%20wiring/IMG_5406.jpg" alt="Ring 3" class="product-image">
+                    <img src="../product_images/IMG_5406.jpg" alt="Ring 3" class="product-image">
                     <div id="des">
                         <h5>Flower Ring</h5>
                         <p1>$65.00</p1>
@@ -77,7 +79,7 @@
                     </div>
                 </div>
                 <div class="product-item" data-category="A">
-                    <img src="../stylin'%20wiring/IMG_5506.jpg" alt="Ring 3" class="product-image">
+                    <img src="../product_images/IMG_5506.jpg" alt="Ring 3" class="product-image">
                     <div id="des">
                         <h5>Copper Rock Ring</h5>
                         <p1>$80.00</p1>
@@ -88,7 +90,7 @@
                     </div>
                 </div>
                 <div class="product-item" data-category="A">
-                    <img src="../stylin'%20wiring/IMG_5541.jpg" alt="Ring 3" class="product-image">
+                    <img src="../product_images/IMG_5541.jpg" alt="Ring 3" class="product-image">
                     <div id="des">
                         <h5>Sky Blue Gem Ring</h5>
                         <p1>$75.00</p1>
@@ -99,7 +101,7 @@
                     </div>
                 </div>
                 <div class="product-item" data-category="C">
-                    <img src="../stylin'%20wiring/IMG_5489.jpg" alt="Ring 3" class="product-image">
+                    <img src="../product_images/IMG_5489.jpg" alt="Ring 3" class="product-image">
                     <div id="des">
                         <h5>Curly Stone Ring</h5>
                         <p1>$55.00</p1>
@@ -110,7 +112,7 @@
                     </div>
                 </div>
                 <div class="product-item" data-category="B">
-                    <img src="../stylin'%20wiring/IMG_9253.jpg" alt="World Bracelet" class="product-image">
+                    <img src="../product_images/IMG_9253.jpg" alt="World Bracelet" class="product-image">
                     <div id="des">
                         <h5>World Bracelet</h5>
                         <p1>$50.00</p1>
@@ -121,7 +123,7 @@
                     </div>
                 </div>
                 <div class="product-item" data-category="B" data-id="2">
-                    <img src="../stylin'%20wiring/earland2.jpg" alt="Earring 1" class="product-image">
+                    <img src="../product_images/earland2.jpg" alt="Earring 1" class="product-image">
                     <div id="des">
                         <h5>Star Burst Earring</h5>
                         <p1>$100.00</p1>
@@ -152,8 +154,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>2024 Stylin' Wiring.</p>
+                <p>2024 Mirromiro.</p>
             </div>
         </footer>
+
+        <script src="../js/cart.js"></script>
     </body>
 </html>

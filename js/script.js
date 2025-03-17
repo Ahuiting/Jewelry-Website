@@ -1,51 +1,70 @@
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.product-container');
-  const items = Array.from(container.children);
-  const searchBar = document.getElementById('search-bar');
-  const sortBtn = document.getElementById('sort-btn');
-  const filterBtn = document.getElementById('filter-btn');
-
-  // Shuffle array
-  const shuffle = (array) => {
+// Utility Functions
+const shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-  };
+};
 
-  // Display items
-  const displayItems = (items) => {
+// Product Display Functions
+const displayItems = (container, items) => {
     container.innerHTML = '';
     items.forEach(item => container.appendChild(item));
-  };
+};
 
-  // Sort items
-  const sortItems = () => {
-    items.sort((a, b) => a.textContent.localeCompare(b.textContent));
-    displayItems(items);
-  };
+const filterItemsByText = (items, searchText) => {
+    return items.filter(item => 
+        item.textContent.toLowerCase().includes(searchText.toLowerCase())
+    );
+};
 
-  // Filter items by category A
-  const filterItems = () => {
-    const filteredItems = items.filter(item => item.dataset.category === 'A');
-    displayItems(filteredItems);
-  };
+// Navigation Functions
+const handleNavigation = () => {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('#navbar li a');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+};
 
-  // Initial shuffle and display
-  displayItems(shuffle(items));
+const handleCategoryNavigation = () => {
+    const categoryLinks = document.getElementsByClassName("displayitems");
+    Array.from(categoryLinks).forEach(category => {
+        category.onclick = () => {
+            window.location.href = `shop.html?filter=${category.id}`;
+        };
+    });
+};
 
-  // Event listeners
-  // sortBtn.addEventListener('click', sortItems);
-  // filterBtn.addEventListener('click', filterItems);
-  searchBar.addEventListener('input', () => {
-    const searchText = searchBar.value.toLowerCase();
-    const filteredItems = items.filter(item => item.textContent.toLowerCase().includes(searchText));
-    displayItems(filteredItems);
-  });
+// Product Container Functions
+const initializeProductContainer = () => {
+    const container = document.querySelector('.product-container');
+    if (!container) return;
+
+    const items = Array.from(container.children);
+    const searchBar = document.getElementById('search-bar');
+
+    // Initial display
+    displayItems(container, shuffle(items));
+
+    // Search functionality
+    if (searchBar) {
+        searchBar.addEventListener('input', () => {
+            const filteredItems = filterItemsByText(items, searchBar.value);
+            displayItems(container, filteredItems);
+        });
+    }
+};
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    handleNavigation();
+    handleCategoryNavigation();
+    initializeProductContainer();
 });
 
 // // Handling sort and filter

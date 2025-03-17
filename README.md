@@ -1,33 +1,103 @@
-# Stylin-Wiring Jewelry Website
+# Mirromiro Jewelry Website
 
-Welcome to the Stylin' Wiring Jewelry Website repository! This website is a showcase of beautiful jewelry pieces crafted with love and care, designed to provide a seamless shopping experience with a clean and minimalistic aesthetic.
-
-## About the Website
-This website is a platform to display and sell unique jewelry pieces created using various wiring techniques. Our mission is to provide a seamless online shopping experience for our customers, while promoting the art of sustainable jewelry making.
-
-# Preview
-![Stylin' Wiring Jewelry Website Preview](/stylin'%20wiring/Jewelry-E-commerce-Website-Screenshot.png)
+A modern, responsive e-commerce website for Mirromiro Jewelry, featuring a clean design and seamless shopping experience.
 
 ## Features
-#### Stay updated with our latest news, promotions, and creations
 
-- **Product Listings:** Visually appealing product pages with detailed descriptions and images on carousel
-- **Shopping Cart:** User-friendly shopping cart functionality for easy purchasing and minimal steps
-- **Contact Page:** Easy to find contact information for inquiries
-- **Modern UI/UX:** Minimalistic and elegant design with a focus on usability
-- Filter by category or search for specific items
+- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+- **Product Catalog**: Grid-based product display with filtering and sorting capabilities
+- **Shopping Cart**: Interactive cart functionality with quantity controls
+- **Category Navigation**: Easy navigation between different jewelry categories
+- **Search Functionality**: Product search feature
+- **Product Details**: Detailed product pages with image carousel
+- **Modern UI**: Clean, elegant design with smooth animations and transitions
 
-### Upcoming Features
-- **Fully Responsive Design** Optimized for all devices, adding tablets
-- **Improved Search Functionality** Advanced search options to help customers find what they're looking for more
-- **SQL Implementation** For product listings and easy content management.
-- **Improved Checkout Process** Streamlined checkout process for a more seamless shopping experience
-- 
+## Technologies Used
+
+- HTML5
+- CSS3 (with Flexbox and Grid)
+- JavaScript (Vanilla)
+- Google Fonts (Playfair Display, Alegreya, Libre Baskerville)
+
+## Project Structure
+
+```
+Jewelry-Website/
+├── html/
+│   ├── index.html
+│   ├── shop.html
+│   ├── about.html
+│   ├── contact.html
+│   └── cart.html
+├── css/
+│   └── style.css
+├── js/
+│   ├── script.js
+│   ├── shop.js
+│   └── cart.js
+├── product_images/
+│   └── [product images]
+└── products.json
+```
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+```
+
+2. Open the project in your preferred code editor
+
+3. Open `html/index.html` in your web browser to view the website
+
+## Features in Detail
+
+### Product Display
+- Grid layout with responsive sizing
+- Product cards with hover effects
+- Image optimization with aspect ratio maintenance
+- Quick view of product details
+
+### Shopping Experience
+- Category filtering
+- Price sorting
+- Search functionality
+- Add to cart functionality
+- Quantity controls
+- Cart summary
+
+### Design Elements
+- Custom scrollbar styling
+- Smooth transitions and animations
+- Responsive navigation
+- Mobile-friendly layout
+- Elegant typography
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.txt file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
----
+## Contact
 
-Have fun browsing our collection of stylish jewelry pieces!
+Email: stylinwiring@gmail.com
+
+## Acknowledgments
+
+- Google Fonts for typography
+- All product images are property of Mirromiro Jewelry

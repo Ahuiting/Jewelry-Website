@@ -2,71 +2,91 @@
   {
     "id": 1,
     "category": "A",
-    "image": "../stylin'%20wiring/IMG_5532.jpg",
+    "image": "../product_images/IMG_5532.jpg",
     "name": "Red Gem Ring",
-    "price": 50.00
+    "price": 45.00,
+    "material": "silver",
+    "stones": ["ruby", "diamond"]
   },
   {
     "id": 2,
     "category": "D",
-    "image": "../stylin'%20wiring/earland2.jpg",
+    "image": "../product_images/earland2.jpg",
     "name": "Star Burst Earring",
-    "price": 100.00
+    "price": 90.00,
+    "material": "bronze",
+    "stones": ["none"]
   },
   {
     "id": 3,
     "category": "A",
-    "image": "../stylin'%20wiring/redeye2.jpg",
+    "image": "../product_images/redeye2.jpg",
     "name": "Red Eye Ring",
-    "price": 100.00
+    "price": 90.00,
+    "material": "silver",
+    "stones": ["ruby", "sapphire"]
   },
   {
     "id": 4,
     "category": "B",
-    "image": "../stylin'%20wiring/bracelets3.jpg",
+    "image": "../product_images/bracelets3.jpg",
     "name": "Grayscale Bracelet Set",
-    "price": 60.00
+    "price": 55.00,
+    "material": "silver",
+    "stones": ["none"]
   },
   {
     "id": 5,
     "category": "B",
-    "image": "../stylin'%20wiring/IMG_9253.jpg",
+    "image": "../product_images/IMG_9253.jpg",
     "name": "World Bracelet",
-    "price": 50.00
+    "price": 45.00,
+    "material": "bronze",
+    "stones": ["none"]
   },
   {
     "id": 6,
     "category": "C",
-    "image": "../stylin'%20wiring/neckland3.jpg",
+    "image": "../product_images/neckland3.jpg",
     "name": "Floral Necklace Set",
-    "price": 105.00
+    "price": 95.00,
+    "material": "silver",
+    "stones": ["amethyst", "diamond"]
   },
   {
     "id": 7,
     "category": "D",
-    "image": "../stylin'%20wiring/landingearring2.jpg",
+    "image": "../product_images/landingearring2.jpg",
     "name": "Drop Earring",
-    "price": 73.00
+    "price": 65.00,
+    "material": "bronze",
+    "stones": ["sapphire", "crystal"]
   },
   {
     "id": 8,
     "category": "A",
-    "image": "../stylin'%20wiring/IMG_54483.jpg",
+    "image": "../product_images/IMG_54483.jpg",
     "name": "Purple Spiral Ring",
-    "price": 40.00
+    "price": 35.00,
+    "material": "silver",
+    "stones": ["amethyst", "crystal"]
   },
   {
     "id": 9,
     "category": "A",
-    "image": "../stylin'%20wiring/IMG_5498.jpg",
+    "image": "../product_images/IMG_5498.jpg",
     "name": "Wrapped Stone Ring",
-    "price": 65.00
+    "price": 60.00,
+    "material": "silver",
+    "stones": ["ruby", "diamond"]
   },
   {
     "id": 10,
     "category": "A",
-    "image": "../stylin'%20wiring/IMG_5489.jpg",
+    "image": "../product_images/IMG_5489.jpg",
     "name": "Curly Stone Ring",
-    "price": 55.00
+    "price": 50.00,
+    "material": "bronze",
+    "stones": ["sapphire", "crystal"]
   }
 ]
